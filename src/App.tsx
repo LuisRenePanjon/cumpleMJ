@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+import amorImage from './assets/amor.jpg'
 
 interface Heart {
   id: number
@@ -312,14 +313,9 @@ function App() {
           <h1 className="title celebration">¡Sabía que dirías que sí! 🎉</h1>
           <div className="final-image-container">
             <img
-              src="/src/assets/amor.jpg"
+              src={amorImage}
               alt="Nosotros"
               className="couple-photo"
-              onError={(e) => {
-                // Fallback if image doesn't exist yet
-                e.currentTarget.style.display = 'none'
-                e.currentTarget.parentElement!.innerHTML = '<div class="photo-placeholder">📷<br/>Coloca tu foto aquí:<br/>/src/assets/couple-photo.jpg</div>'
-              }}
             />
           </div>
           <h2 className="final-message">
